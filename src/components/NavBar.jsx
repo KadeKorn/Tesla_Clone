@@ -2,7 +2,7 @@ import React from "react";
 
 export const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center px-12 p-4 text-sm font-bold">
+    <div className="flex justify-between items-center px-12 p-4 text-sm font-bold">
       <div>
         <img
           className="h-3"
@@ -11,27 +11,43 @@ export const NavBar = () => {
         />
       </div>
 
-      <div>
+      <div className="hidden lg:inline">
         <ul className="flex justify-center hover:cursor-pointer">
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Model S</li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Model 3</li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Model X</li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Model Y</li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Solar Roof</li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Solar Panels</li>
+          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+            Solar Roof
+          </li>
+          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+            Solar Panels
+          </li>
         </ul>
       </div>
 
-      <div>
+      <div className="hidden lg:inline">
         <ul className="flex justify-center hover:cursor-pointer">
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Shop</li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Account</li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Menu</li>
         </ul>
       </div>
-    </nav>
+      <div className="lg:hidden">
+        <button className="inline-flex items-center rounded-md py-2 px-4 text-sm font-medium bg-black/5 shadow-sm hover:bg-black/10">Menu</button>
+      </div>
+    </div>
   );
 };
+
+// Starting Div
+// flex: Applies the CSS flex display property, making the element a flex container.
+// justify-between: Horizontally spaces flex items such that the first item is at the start and the last item is at the end of the flex container.
+// items-center: Vertically aligns flex items to the center of the flex container.
+// px-12: Adds horizontal padding (left and right) to the element equivalent to the spacing scale of 12 in Tailwind.
+// p-4: Adds padding to all sides of the element equivalent to the spacing scale of 4 in Tailwind.
+// text-sm: Sets the font size of the text inside the element to "small" based on Tailwind's size scale.
+// font-bold: Makes the text inside the element bold.
 
 // LI css explained
 // py-1: Adds vertical padding (top and bottom) to the element equivalent to the spacing scale of 1 in Tailwind.
@@ -40,7 +56,6 @@ export const NavBar = () => {
 // hover:bg-black/5: Changes the background color of the element to black with 20% opacity (1/5th opaque) when it's hovered over.
 
 // UL css explained
-//flex: Applies the CSS flex display property, transforming the element into a flex container.
-//justify-center: Horizontally aligns flex items to the center of the flex container.
-//hover:cursor-pointer: Changes the mouse cursor to a pointer (hand icon) when the element is hovered over.
-
+// flex: Applies the CSS flex display property, transforming the element into a flex container.
+// justify-center: Horizontally aligns flex items to the center of the flex container.
+// hover:cursor-pointer: Changes the mouse cursor to a pointer (hand icon) when the element is hovered over.
