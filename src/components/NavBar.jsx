@@ -40,7 +40,9 @@ export const NavBar = () => {
   );
 };
 
-// Starting Div
+//Component explained - GIVE BETTER DESCRIPTION WHEN DONE Whats really cool about using tailwind is you can make your website so responsive quite easily. 
+
+// Starting Div (container) css explained 
 // flex: Applies the CSS flex display property, making the element a flex container.
 // justify-between: Horizontally spaces flex items such that the first item is at the start and the last item is at the end of the flex container.
 // items-center: Vertically aligns flex items to the center of the flex container.
@@ -59,3 +61,15 @@ export const NavBar = () => {
 // flex: Applies the CSS flex display property, transforming the element into a flex container.
 // justify-center: Horizontally aligns flex items to the center of the flex container.
 // hover:cursor-pointer: Changes the mouse cursor to a pointer (hand icon) when the element is hovered over.
+
+// Button css explained 
+// inline-flex: Applies the CSS inline-flex display property, making the element an inline-level flex container.
+// items-center: Vertically aligns flex items to the center of the flex container.
+// rounded-md: Rounds the corners of the element with a medium radius.
+// py-2: Adds vertical padding (top and bottom) to the element equivalent to the spacing scale of 2 in Tailwind.
+// px-4: Adds horizontal padding (left and right) to the element equivalent to the spacing scale of 4 in Tailwind.
+// text-sm: Sets the font size of the text inside the element to "small" based on Tailwind's size scale.
+// font-medium: Sets the weight of the text inside the element to medium.
+// bg-black/5: Sets the background color of the element to black with 20% opacity.
+// shadow-sm: Adds a small box shadow to the element.
+// hover:bg-black/10: Changes the background color of the element to black with 10% opacity when it's hovered over.
