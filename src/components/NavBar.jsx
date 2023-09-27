@@ -1,4 +1,5 @@
 import React from "react";
+import { TfiClose } from 'react-icons/tfi';
 
 export const NavBar = () => {
   return (
@@ -51,6 +52,33 @@ export const NavBar = () => {
         <button className="inline-flex items-center rounded-md py-2 px-4 text-sm font-medium bg-black/5 shadow-sm hover:bg-black/10">
           Menu
         </button>
+      </div>
+      <div className="bg-white absolute top-0 right-0 w-80 h-full z-10">
+        <div className="flex justify-end pr-8 pt-8">
+          <TfiClose className="rounded p-1 hover:bg-black/5 " size={28}/>
+        </div>
+          <ul className="t-8 px-6">
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/models">Model S</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/model3">Model 3</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/modelx">Model X</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/modely">Model Y</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/solarroof">Solar Roof</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/modelsolarpanels">Solar Panels</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/inventory/new/m3">Existing Inventory</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/inventory/used/m3">Used Inventory</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/tradein">Trade-In</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/drive">Demo Drive</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/insurance">Insurance</a></li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">  <a href="https://tesla.com/powerwall">Powerwall</a></li>
+            {/* <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Commercial Energy </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Utilities</li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Charging</li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Find Us</li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Support</li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Investor Relations</li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Shop</li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Account</li> */}
+          </ul>
       </div>
     </div>
   );
