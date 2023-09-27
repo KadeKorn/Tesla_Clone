@@ -117,3 +117,12 @@ export const NavBar = () => {
 // bg-black/5: Sets the background color of the element to black with 20% opacity.
 // shadow-sm: Adds a small box shadow to the element.
 // hover:bg-black/10: Changes the background color of the element to black with 10% opacity when it's hovered over.
+
+// Side Menu css explained
+// bg-white: Sets the background color of the element to white.
+// absolute: Positions the element with absolute positioning relative to the nearest positioned ancestor.
+// top-0: Sets the top edge of the element to align with the top edge of its closest positioned ancestor.
+// right-0: Sets the right edge of the element to align with the right edge of its closest positioned ancestor.
+// w-80: Sets the width of the element to 80 units (typically this would be 80% if using a utility-first CSS framework like TailwindCSS).
+// h-full: Sets the height of the element to be the full height of its parent.
+// z-10: Sets the z-index of the element to 10, which controls the stacking order of positioned elements.
