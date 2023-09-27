@@ -186,3 +186,8 @@ export const NavBar = () => {
 // w-80: Sets the width of the element to 80 units (typically this would be 80% if using a utility-first CSS framework like TailwindCSS).
 // h-full: Sets the height of the element to be the full height of its parent.
 // z-10: Sets the z-index of the element to 10, which controls the stacking order of positioned elements.
+
+// Logic
+// I added some functionality - set up a use state and a toggle. I added the toggle to both menu options
+// and the close icon. I then added a ternary operator (line 71-75) to conditionally render the menu via the toggle. If true 
+// then it opens and if the toggle is then clicked again (from any of the three options) then it closes
