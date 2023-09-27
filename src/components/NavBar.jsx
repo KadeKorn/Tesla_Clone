@@ -16,7 +16,6 @@ export const NavBar = () => {
       <div className="hidden lg:inline">
         <ul className="flex justify-center hover:cursor-pointer">
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            {" "}
             <a href="https://tesla.com/models">Model S</a>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
@@ -42,7 +41,9 @@ export const NavBar = () => {
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
             <a href="https://shop.tesla.com">Shop</a>
           </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Account</li>
+          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+            <a href="https://tesla.com/teslaaccount">Account</a>
+          </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">Menu</li>
         </ul>
       </div>
