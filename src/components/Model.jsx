@@ -3,33 +3,54 @@ import { FiChevronDown } from "react-icons/fi";
 
 export const Model = () => {
   return (
-    <div>
-      <div className="absolute inset-x-0 top-[15%] text-center">
-        <h1 className="text-4xl font-bold">Model 3</h1>
-        <p className="p-2 text-sm">
-          Order online for
-          <a href="https://www.tesla.com/support/taking-delivery?redirect=no">
-            <span className="underline underline-offset-4 ">
-              Touchless Delivery
-            </span>
-          </a>
-        </p>
-      </div>
+    <div
+      className="relative h-screen bg-cover bg-center"
+      style={{
+        background: `url(https://tesla-cdn.thron.com/delivery/public/image/tesla/9160c5a3-b818-42dd-bb98-b8597948c636/bvlatuR/std/1927x4096/M3-Homepage-Mobile-LHD)`,
+      }}
+    >
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        autoPlay
+        loop
+        muted
+      >
+        <source
+          src="https://digitalassets.tesla.com/tesla-contents/video/upload/Model-3-Main-Hero-Video-Desktop-NA.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
 
-      <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
-        <a href="https://www.tesla.com/model3/design#overview">
-          <button className="bg-[#393c41] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
-            Custom Order
-          </button>
-        </a>
-        <a href="https://www.tesla.com/inventory/new/m3">
-          <button className="bg-[#eeeeee] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
-            Existing Inventory
-          </button>
-        </a>
-      </div>
-      <div className="flex justify-center animate-bounce absolute inset-x-0 bottom-[2.5%]">
-        <FiChevronDown size={20} />
+      <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col">
+        <div className="absolute inset-x-0 top-[15%] text-center">
+          <h1 className="text-4xl font-bold">Model 3</h1>
+          <p className="p-2 text-sm">
+            Order online for
+            <a href="https://www.tesla.com/support/taking-delivery?redirect=no">
+              <span className="underline underline-offset-4 ">
+                Touchless Delivery
+              </span>
+            </a>
+          </p>
+        </div>
+
+        <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
+          <a href="https://www.tesla.com/model3/design#overview">
+            <button className="bg-[#393c41] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
+              Custom Order
+            </button>
+          </a>
+          <a href="https://www.tesla.com/inventory/new/m3">
+            <button className="bg-[#eeeeee] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
+              Existing Inventory
+            </button>
+          </a>
+        </div>
+
+        <div className="flex justify-center animate-bounce absolute inset-x-0 bottom-[2.5%]">
+          <FiChevronDown size={20} />
+        </div>
       </div>
     </div>
   );
