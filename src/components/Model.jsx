@@ -1,15 +1,14 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-export const Model = ({ name, image, video }) => {
+export const Model = ({ name, image, video, textColor }) => {
   return (
     <div
-      className="relative h-screen bg-cover bg-center"
-      style={{
-        background: video ? "" : `url(${image})`,
-      }}
+      className={`relative h-screen flex items-center justify-center ${
+        video ? "" : "bg-no-repeat"
+      }`}
     >
-      {video && (
+      {video ? (
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
           autoPlay
@@ -19,11 +18,19 @@ export const Model = ({ name, image, video }) => {
           <source src={video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+      ) : (
+        <img
+          src={image}
+          alt={`${name}`}
+          className="object-cover w-full h-full"
+        />
       )}
 
       <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col">
-        <div className="absolute inset-x-0 top-[15%] text-center">
-          <h1 className="text-4xl font-bold">Model 3</h1>
+        <div
+          className={`absolute inset-x-0 top-[15%] text-center text-${textColor}`}
+        >
+          <h1 className="text-4xl font-bold">{name}</h1>
           <p className="p-2 text-sm">
             Order online for
             <a href="https://www.tesla.com/support/taking-delivery?redirect=no">
