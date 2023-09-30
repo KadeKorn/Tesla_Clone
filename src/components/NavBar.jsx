@@ -9,7 +9,8 @@ export const NavBar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center px-12 p-4 text-sm font-bold">
+    <div className="fixed top-0 left-0 w-full font-bold px-12 p-4 flex justify-between items-center bg-transparent z-50">
+      {/* flex justify-between items-center px-12 p-4 text-sm font-bold */}
       <div>
         <a href="https://tesla.com">
           <img
@@ -83,61 +84,41 @@ export const NavBar = () => {
         </div>
         <ul className="t-8 px-6">
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/models">Model S</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/model3">Model 3</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/modelx">Model X</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/modely">Model Y</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/solarroof">Solar Roof</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/modelsolarpanels">Solar Panels</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/inventory/new/m3">Existing Inventory</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/inventory/used/m3">Used Inventory</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/tradein">Trade-In</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/drive">Demo Drive</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/insurance">Insurance</a>
           </li>
           <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
-            {" "}
             <a href="https://tesla.com/powerwall">Powerwall</a>
           </li>
-          {/* <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Commercial Energy </li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Utilities</li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Charging</li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Find Us</li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Support</li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Investor Relations</li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Shop</li>
-            <li className="py-3 pl-3 hover:rounded hover:bg-black/5">Account</li> */}
         </ul>
       </div>
     </div>
@@ -189,5 +170,5 @@ export const NavBar = () => {
 
 // Logic
 // I added some functionality - set up a use state and a toggle. I added the toggle to both menu options
-// and the close icon. I then added a ternary operator (line 71-75) to conditionally render the menu via the toggle. If true 
+// and the close icon. I then added a ternary operator (line 71-75) to conditionally render the menu via the toggle. If true
 // then it opens and if the toggle is then clicked again (from any of the three options) then it closes
