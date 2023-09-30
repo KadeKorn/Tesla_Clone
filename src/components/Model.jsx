@@ -56,6 +56,8 @@ export const Model = () => {
   );
 };
 
+//Perhaps I should make the nav bar in the components or see how I can have it there always. Idk
+
 // Imported font from react-icons.
 
 // Hero Image: Text div css explained
