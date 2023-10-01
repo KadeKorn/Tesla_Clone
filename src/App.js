@@ -5,11 +5,13 @@ import { modelsData } from "./modelsData";
 
 function App() {
   return (
-    <div className="h-screen">
+    <div>
       <NavBar />
-      {modelsData.map((model, index) => (
-        <Model key={index} {...model} />
-      ))}
+      <div className="snap snap-y snap-mandatory h-screen overflow-auto">
+        {modelsData.map((model, index) => (
+          <Model key={index} {...model} />
+        ))}
+      </div>
     </div>
   );
 }

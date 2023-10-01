@@ -10,3 +10,13 @@
 * {
   font-family: "Gotham Book", sans-serif;
 }
+
+.snap {
+  scroll-snap-type: y mandatory;
+}
+.snap-y {
+  scroll-snap-type: y;
+}
+.snap-mandatory {
+  scroll-snap-align: start;
+}
