@@ -11,12 +11,14 @@
   font-family: "Gotham Book", sans-serif;
 }
 
-.snap {
+/* Adding scroll snap properties */
+.scroll-snap-container {
   scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
 }
-.snap-y {
-  scroll-snap-type: y;
-}
-.snap-mandatory {
+
+.scroll-snap-section {
   scroll-snap-align: start;
+  height: 100vh;
 }
