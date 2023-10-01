@@ -1,7 +1,7 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-export const Model = ({ name, image, video, textColor }) => {
+export const Model = ({ name, image, video, textColor, price }) => {
   return (
     <div
       className={`relative h-screen flex items-center justify-center ${
@@ -30,15 +30,11 @@ export const Model = ({ name, image, video, textColor }) => {
         <div
           className={`absolute inset-x-0 top-[15%] text-center text-${textColor}`}
         >
-          <h1 className="text-4xl font-bold">{name}</h1>
-          <p className="p-2 text-sm">
-            Order online for
-            <a href="https://www.tesla.com/support/taking-delivery?redirect=no">
-              <span className="underline underline-offset-4 ">
-                Touchless Delivery
-              </span>
-            </a>
-          </p>
+          <h1 className="text-5xl font-bold">{name}</h1>
+          <h2 className="p-2 text-2xl">
+            {price}
+          </h2>
+          <p className="text-sm">After Federal Tax Credit & Est. Gas Savings</p>
         </div>
 
         <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">

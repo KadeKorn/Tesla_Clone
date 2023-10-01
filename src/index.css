@@ -9,6 +9,7 @@
 
 * {
   font-family: "Gotham Book", sans-serif;
+  outline-offset: 2px;
 }
 
 /* Adding scroll snap properties */
