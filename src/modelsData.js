@@ -15,7 +15,7 @@ export const modelsData = [
       "https://digitalassets.tesla.com/tesla-contents/image/upload/h_2400,w_2880,c_fit,f_auto,q_auto:best/Homepage-Model-Y-Global-Desktop",
     video: null,
     textColor: "black",
-    price: "From $29,740"
+    price: "From $39,390"
   },
   {
     name: "Model S",
@@ -23,7 +23,7 @@ export const modelsData = [
       "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-LHD-6.22.jpg",
     video: null,
     textColor: "black",
-    price: "From $29,740"
+    price: "From $71,090"
   },
   {
     name: "Model X",
@@ -31,7 +31,7 @@ export const modelsData = [
       "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Homepage-Model-X-Desktop-LHD",
     video: null,
     textColor: "black",
-    price: "From $29,740"
+    price: "From $68,590"
   },
   // ... other models
 ];
