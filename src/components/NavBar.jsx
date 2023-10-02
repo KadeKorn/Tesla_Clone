@@ -3,9 +3,15 @@ import { TfiClose } from "react-icons/tfi";
 
 export const NavBar = ({ currentModel, hasVideo }) => {
   const [nav, setNav] = useState(false);
+  const [vehiclesSubMenuOpen, setVehiclesSubMenuOpen] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
+    setVehiclesSubMenuOpen(false); // Reset the vehicles submenu state when toggling the main menu
+  };
+
+  const handleVehiclesSubMenuToggle = () => {
+    setVehiclesSubMenuOpen(!vehiclesSubMenuOpen);
   };
 
   const textColorClass = hasVideo ? "text-white" : "text-black";
@@ -73,7 +79,18 @@ export const NavBar = ({ currentModel, hasVideo }) => {
         </button>
       </div>
       {nav && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white z-40"></div>
+        <div
+          className={`fixed top-0 left-0 w-full h-full ${
+            vehiclesSubMenuOpen ? "bg-transparent" : "bg-white"
+          } z-40`}
+        >
+          {!vehiclesSubMenuOpen && (
+            <div className="vehicles-menu-button bg-red color-red text-red">
+              {/* This button toggles the vehicles submenu */}
+              <button onClick={handleVehiclesSubMenuToggle}>Vehicles</button>
+            </div>
+          )}
+        </div>
       )}
 
       <div
@@ -90,44 +107,58 @@ export const NavBar = ({ currentModel, hasVideo }) => {
             size={28}
           />
         </div>
-        <ul className="t-8 px-6">
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/models">Model S</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/model3">Model 3</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/modelx">Model X</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/modely">Model Y</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/solarroof">Solar Roof</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/modelsolarpanels">Solar Panels</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/inventory/new/m3">Existing Inventory</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/inventory/used/m3">Used Inventory</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/tradein">Trade-In</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/drive">Demo Drive</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/insurance">Insurance</a>
-          </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
-            <a href="https://tesla.com/powerwall">Powerwall</a>
-          </li>
-        </ul>
+        {vehiclesSubMenuOpen ? (
+          <div className="vehicles-submenu">
+            {/* Vehicles Submenu */}
+            <div>Model S</div>
+            <div>Model 3</div>
+            <div>Model X</div>
+            <div>Model Y</div>
+            {/* Back button to return to main menu */}
+            <button onClick={handleVehiclesSubMenuToggle}>Back</button>
+          </div>
+        ) : (
+          <ul className="t-8 px-6">
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/models">Model S</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/model3">Model 3</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/modelx">Model X</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/modely">Model Y</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/solarroof">Solar Roof</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/modelsolarpanels">Solar Panels</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/inventory/new/m3">
+                Existing Inventory
+              </a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/inventory/used/m3">Used Inventory</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/tradein">Trade-In</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/drive">Demo Drive</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/insurance">Insurance</a>
+            </li>
+            <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
+              <a href="https://tesla.com/powerwall">Powerwall</a>
+            </li>
+          </ul>
+        )}
       </div>
     </div>
   );
