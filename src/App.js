@@ -6,15 +6,17 @@ import "./index.css";
 
 function App() {
   const [currentModel, setCurrentModel] = useState(null);
+  const [hasVideo, setHasVideo] = useState(true);  // Initialize to true since the first section has a video
 
   const handleScroll = (e) => {
     const index = Math.round(e.target.scrollTop / window.innerHeight);
     setCurrentModel(modelsData[index].name);
+    setHasVideo(modelsData[index].video !== null);
   };
 
   return (
     <div>
-      <NavBar currentModel={currentModel} />
+      <NavBar currentModel={currentModel} hasVideo={hasVideo}/>
       <div className="scroll-snap-container" onScroll={handleScroll}>
         {modelsData.map((model, index) => (
           <div className="scroll-snap-section" key={index}>

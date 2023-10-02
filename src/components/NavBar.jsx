@@ -1,19 +1,20 @@
 import React, { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
 
-export const NavBar = ({ currentModel }) => {
+export const NavBar = ({ currentModel, hasVideo }) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
     setNav(!nav);
   };
 
-  const isModel3 = currentModel === 'Model 3';
-  const textColorClass = isModel3 ? 'text-white' : 'text-black';
-  const logoFilterClass = isModel3 ? 'filter invert' : '';
+  const textColorClass = hasVideo ? "text-white" : "text-black";
+  const logoFilterClass = hasVideo ? "filter invert" : "";
 
   return (
-    <div className={`fixed top-0 left-0 w-full font-bold px-12 p-4 flex justify-between items-center bg-transparent z-50 ${textColorClass}`}>
+    <div
+      className={`fixed top-0 left-0 w-full font-bold px-12 p-4 flex justify-between items-center bg-transparent z-50 ${textColorClass}`}
+    >
       <div>
         <a href="https://tesla.com">
           <img
