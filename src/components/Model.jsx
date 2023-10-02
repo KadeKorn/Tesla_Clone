@@ -10,7 +10,7 @@ export const Model = ({ name, image, video, textColor, price }) => {
     >
       {video ? (
         <video
-          className="absolute top-0 left-0 w-full h-full object-cover z-0"
+          className="absolute top-0 left-0 w-full h-full object-cover z-10"
           autoPlay
           loop
           muted

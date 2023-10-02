@@ -13,7 +13,7 @@ export const NavBar = ({ currentModel, hasVideo }) => {
 
   return (
     <div
-      className={`fixed top-0 left-0 w-full font-bold px-12 p-4 flex justify-between items-center bg-transparent z-50 ${textColorClass}`}
+      className={`fixed top-0 left-0 w-full font-bold px-12 p-4 flex justify-between items-center bg-transparent z-20 ${textColorClass}`}
     >
       <div>
         <a href="https://tesla.com">
@@ -67,60 +67,64 @@ export const NavBar = ({ currentModel, hasVideo }) => {
       <div className="lg:hidden">
         <button
           onClick={handleNav}
-          className="inline-flex items-center rounded-md py-2 px-4 text-sm font-medium bg-black/5 shadow-sm hover:bg-black/10"
+          className="inline-flex items-center rounded-md py-2 px-4 text-sm font-medium bg-black/5 shadow-sm hover:bg-black/10 "
         >
           Menu
         </button>
       </div>
+      {nav && (
+        <div className="fixed top-0 left-0 w-full h-full bg-white z-40"></div>
+      )}
+
       <div
         className={
           nav
-            ? "bg-white absolute top-0 right-0 w-80 h-full z-10"
-            : "fixed right-[100%]"
+            ? "bg-white absolute top-0 right-0 w-full h-full z-50"
+            : "fixed right-[100%] z-50"
         }
       >
-        <div className="flex justify-end pr-8 pt-8">
+        <div className="flex justify-end pr-8 pt-8 color-black">
           <TfiClose
             onClick={handleNav}
-            className="rounded p-1 hover:bg-black/5 "
+            className="rounded p-1 hover:bg-black/5 text-black "
             size={28}
           />
         </div>
         <ul className="t-8 px-6">
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/models">Model S</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/model3">Model 3</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/modelx">Model X</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/modely">Model Y</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/solarroof">Solar Roof</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/modelsolarpanels">Solar Panels</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/inventory/new/m3">Existing Inventory</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/inventory/used/m3">Used Inventory</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/tradein">Trade-In</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/drive">Demo Drive</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/insurance">Insurance</a>
           </li>
-          <li className="py-3 pl-3 hover:rounded hover:bg-black/5">
+          <li className="py-3 pl-3 hover:rounded hover:bg-black/5 text-black">
             <a href="https://tesla.com/powerwall">Powerwall</a>
           </li>
         </ul>
