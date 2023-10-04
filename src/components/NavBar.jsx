@@ -83,10 +83,10 @@ export const NavBar = ({ currentModel, hasVideo }) => {
           className={`fixed top-0 left-0 w-full h-full ${
             vehiclesSubMenuOpen ? "bg-transparent" : "bg-white"
           } z-40`}
-        >
+        > 
           {!vehiclesSubMenuOpen && (
             <div className="vehicles-menu-button bg-red color-red text-red">
-              {/* This button toggles the vehicles submenu */}
+              {/* I need to find this button This button toggles the vehicles submenu */}
               <button onClick={handleVehiclesSubMenuToggle}>Vehicles</button>
             </div>
           )}
