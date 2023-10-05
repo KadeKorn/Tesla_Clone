@@ -47,16 +47,23 @@
   position: fixed;
   top: 0;
   left: 0;
-  transition: height 0.2s ease-in-out;
+  transition: height 0.5s ease-in-out;
   overflow: hidden;
-  z-index: 30;
+  @apply bg-white bg-opacity-75
+  
 }
 
 .dropdown-bg.show {
   height: 60%;
 }
 
-.text-black-on-dropdown {
-  color: black;
+.text-black {
+  color: black ;
+}
+
+.invert-logo {
   filter: invert(1);
 }
+
+
+
