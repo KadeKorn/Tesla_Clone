@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
 import "../index.css";
-
+import { Link } from "react-scroll";
 
 export const NavBar = ({ currentModel, hasVideo }) => {
   const [nav, setNav] = useState(false);
@@ -30,16 +30,24 @@ export const NavBar = ({ currentModel, hasVideo }) => {
       <div className="hidden lg:inline">
         <ul className="flex justify-center hover:cursor-pointer">
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/models">Model S</a>
-          </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
             <a href="https://tesla.com/model3"> Model 3</a>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/modelx">Model X</a>
+            <a href="https://tesla.com/modely">Model Y</a>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/modely">Model Y</a>
+            <Link
+              to="modelS"
+              smooth={true}
+              duration={1000}
+              containerId="scroll-snap-container" // Use the ID of your scrollable container
+              offset={-80} // Adjust as per your navbar height or any desired offset
+            >
+              Model S
+            </Link>
+          </li>
+          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
+            <a href="https://tesla.com/modelx">Model X</a>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
             <a href="https://tesla.com/solarroof">Solar Roof</a>
