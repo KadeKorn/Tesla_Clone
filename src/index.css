@@ -24,43 +24,9 @@
   height: 100vh;
 }
 
-/* Dropdown */
+/* Menu Popup */
 
-.dropdown-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.transition-all-slow {
+  transition: transform .5s ease, opacity .5s ease;
 }
-
-.models-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.dropdown-bg {
-  width: 100%;
-  height: 0;
-  background-color: white;
-  position: fixed;
-  top: 0;
-  left: 0;
-  transition: height 0.5s ease-in-out;
-  overflow: hidden;
-  @apply bg-white bg-opacity-75
-  
-}
-
-.dropdown-bg.show {
-  height: 60%;
-}
-
-.text-black {
-  color: black ;
-}
-
-
-
 

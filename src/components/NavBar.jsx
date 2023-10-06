@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { TfiClose } from "react-icons/tfi";
+import "../index.css";
+
 
 export const NavBar = ({ currentModel, hasVideo }) => {
   const [nav, setNav] = useState(false);
@@ -73,14 +75,17 @@ export const NavBar = ({ currentModel, hasVideo }) => {
         </button>
       </div>
       {nav && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white z-40"></div>
+        <div
+          onClick={handleNav} // Allow closing the menu by clicking the overlay
+          className="fixed top-0 left-0 w-full h-full bg-black/50 backdrop-blur-md z-45 cursor-pointer"
+        ></div>
       )}
 
       <div
         className={
           nav
-            ? "bg-white absolute top-0 right-0 w-full h-full z-50"
-            : "fixed right-[100%] z-50"
+            ? "bg-white fixed top-0 right-0 w-[30%] h-full z-50 transition-all-slow transform translate-x-0 opacity-100"
+            : "bg-white fixed top-0 right-0 w-[30%] h-full z-50 transition-all-slow transform translate-x-[-100%] opacity-0 pointer-events-none"
         }
       >
         <div className="flex justify-end pr-8 pt-8 color-black">
@@ -132,51 +137,3 @@ export const NavBar = ({ currentModel, hasVideo }) => {
     </div>
   );
 };
-
-//Component explained - GIVE BETTER DESCRIPTION WHEN DONE Whats really cool about using tailwind is you can make your website so responsive quite easily.
-
-// Starting Div (container) css explained
-// flex: Applies the CSS flex display property, making the element a flex container.
-// justify-between: Horizontally spaces flex items such that the first item is at the start and the last item is at the end of the flex container.
-// items-center: Vertically aligns flex items to the center of the flex container.
-// px-12: Adds horizontal padding (left and right) to the element equivalent to the spacing scale of 12 in Tailwind.
-// p-4: Adds padding to all sides of the element equivalent to the spacing scale of 4 in Tailwind.
-// text-sm: Sets the font size of the text inside the element to "small" based on Tailwind's size scale.
-// font-bold: Makes the text inside the element bold.
-
-// LI css explained
-// py-1: Adds vertical padding (top and bottom) to the element equivalent to the spacing scale of 1 in Tailwind.
-// px-3: Adds horizontal padding (left and right) to the element equivalent to the spacing scale of 3 in Tailwind.
-// hover:rounded: Rounds the corners of the element when it's hovered over.
-// hover:bg-black/5: Changes the background color of the element to black with 20% opacity (1/5th opaque) when it's hovered over.
-
-// UL css explained
-// flex: Applies the CSS flex display property, transforming the element into a flex container.
-// justify-center: Horizontally aligns flex items to the center of the flex container.
-// hover:cursor-pointer: Changes the mouse cursor to a pointer (hand icon) when the element is hovered over.
-
-// Button css explained
-// inline-flex: Applies the CSS inline-flex display property, making the element an inline-level flex container.
-// items-center: Vertically aligns flex items to the center of the flex container.
-// rounded-md: Rounds the corners of the element with a medium radius.
-// py-2: Adds vertical padding (top and bottom) to the element equivalent to the spacing scale of 2 in Tailwind.
-// px-4: Adds horizontal padding (left and right) to the element equivalent to the spacing scale of 4 in Tailwind.
-// text-sm: Sets the font size of the text inside the element to "small" based on Tailwind's size scale.
-// font-medium: Sets the weight of the text inside the element to medium.
-// bg-black/5: Sets the background color of the element to black with 20% opacity.
-// shadow-sm: Adds a small box shadow to the element.
-// hover:bg-black/10: Changes the background color of the element to black with 10% opacity when it's hovered over.
-
-// Side Menu css explained
-// bg-white: Sets the background color of the element to white.
-// absolute: Positions the element with absolute positioning relative to the nearest positioned ancestor.
-// top-0: Sets the top edge of the element to align with the top edge of its closest positioned ancestor.
-// right-0: Sets the right edge of the element to align with the right edge of its closest positioned ancestor.
-// w-80: Sets the width of the element to 80 units (typically this would be 80% if using a utility-first CSS framework like TailwindCSS).
-// h-full: Sets the height of the element to be the full height of its parent.
-// z-10: Sets the z-index of the element to 10, which controls the stacking order of positioned elements.
-
-// Logic
-// I added some functionality - set up a use state and a toggle. I added the toggle to both menu options
-// and the close icon. I then added a ternary operator (line 71-75) to conditionally render the menu via the toggle. If true
-// then it opens and if the toggle is then clicked again (from any of the three options) then it closes
