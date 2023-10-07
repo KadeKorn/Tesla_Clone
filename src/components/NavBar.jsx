@@ -1,7 +1,7 @@
 import React, { useState } from "react";
+import NavbarItem from "../assets/ui/NavBarItem";
 import { TfiClose } from "react-icons/tfi";
 import "../index.css";
-import { Link } from "react-scroll";
 
 export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
   const [nav, setNav] = useState(false);
@@ -26,53 +26,26 @@ export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
           />
         </a>
       </div>
-
-      <div className="hidden lg:inline">
-        <ul className="flex justify-center hover:cursor-pointer">
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <span
-              role="button"
-              className="cursor-pointer"
-              onClick={() => handleModelScroll("model3")}
-            >
-              Model 3
-            </span>
-          </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <span
-              role="button"
-              className="cursor-pointer"
-              onClick={() => handleModelScroll("modely")}
-            >
-              Model Y
-            </span>
-          </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <span
-              role="button"
-              className="cursor-pointer"
-              onClick={() => handleModelScroll("models")}
-            >
-              Model S
-            </span>
-          </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-          <span
-              role="button"
-              className="cursor-pointer"
-              onClick={() => handleModelScroll("modelx")}
-            >
-              Model X
-            </span>
-          </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/solarroof">Solar Roof</a>
-          </li>
-          <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/solarpanels">Solar Panels </a>
-          </li>
-        </ul>
-      </div>
+      <ul className="flex justify-center space-x-4 hover:cursor-pointer">
+        <NavbarItem
+          label="Model 3"
+          onClick={() => handleModelScroll("model3")}
+        />
+        <NavbarItem
+          label="Model Y"
+          onClick={() => handleModelScroll("modely")}
+        />
+        <NavbarItem
+          label="Model S"
+          onClick={() => handleModelScroll("models")}
+        />
+        <NavbarItem
+          label="Model X"
+          onClick={() => handleModelScroll("modelx")}
+        />
+        <NavbarItem label="Solar Roof" href="https://tesla.com/solarroof" />
+        <NavbarItem label="Solar Panels" href="https://tesla.com/solarpanels" />
+      </ul>
 
       <div className="hidden lg:inline">
         <ul className="flex justify-center hover:cursor-pointer">
