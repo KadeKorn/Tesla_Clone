@@ -30,10 +30,22 @@ export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
       <div className="hidden lg:inline">
         <ul className="flex justify-center hover:cursor-pointer">
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/model3"> Model 3</a>
+            <span
+              role="button"
+              className="cursor-pointer"
+              onClick={() => handleModelScroll("model3")}
+            >
+              Model 3
+            </span>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/modely">Model Y</a>
+            <span
+              role="button"
+              className="cursor-pointer"
+              onClick={() => handleModelScroll("modely")}
+            >
+              Model Y
+            </span>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
             <span
@@ -45,7 +57,13 @@ export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
             </span>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <a href="https://tesla.com/modelx">Model X</a>
+          <span
+              role="button"
+              className="cursor-pointer"
+              onClick={() => handleModelScroll("modelx")}
+            >
+              Model X
+            </span>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
             <a href="https://tesla.com/solarroof">Solar Roof</a>
