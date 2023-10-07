@@ -15,9 +15,9 @@ function App() {
     setHasVideo(modelsData[index].video !== null);
   };
 
-  const handleModelScroll = (model) => {
-    console.log("Attempting to scroll to:", model);
-    const idx = modelsData.findIndex((m) => m.name.toLowerCase() === model);
+  const handleModelScroll = (modelId) => {
+    console.log("Attempting to scroll to:", modelId);
+    const idx = modelsData.findIndex((m) => m.id === modelId);
     if (idx !== -1 && scrollContainerRef.current) {
       const targetPosition = idx * window.innerHeight;
       scrollContainerRef.current.scrollTo(0, targetPosition);
@@ -37,11 +37,7 @@ function App() {
         ref={scrollContainerRef}
       >
         {modelsData.map((model, index) => (
-          <div
-            className="scroll-snap-section"
-            key={index}
-            id={model.name.toLowerCase()}
-          >
+          <div className="scroll-snap-section" key={index} id={model.id}>
             <Model {...model} />
           </div>
         ))}

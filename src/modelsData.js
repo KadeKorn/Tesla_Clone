@@ -2,6 +2,7 @@
 export const modelsData = [
   {
     name: "Model 3",
+    id: "model3",
     image:
       "https://tesla-cdn.thron.com/delivery/public/image/tesla/9160c5a3-b818-42dd-bb98-b8597948c636/bvlatuR/std/1927x4096/M3-Homepage-Mobile-LHD",
     video:
@@ -11,6 +12,7 @@ export const modelsData = [
   },
   {
     name: "Model Y",
+    id: "modely",
     image:
       "https://digitalassets.tesla.com/tesla-contents/image/upload/h_2400,w_2880,c_fit,f_auto,q_auto:best/Homepage-Model-Y-Global-Desktop",
     video: null,
@@ -18,7 +20,8 @@ export const modelsData = [
     price: "From $39,390"
   },
   {
-    name: "Models",
+    name: "Model S",
+    id: "models",
     image:
       "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-LHD-6.22.jpg",
     video: null,
@@ -27,6 +30,7 @@ export const modelsData = [
   },
   {
     name: "Model X",
+    id: "modelx",
     image:
       "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/Homepage-Model-X-Desktop-LHD",
     video: null,

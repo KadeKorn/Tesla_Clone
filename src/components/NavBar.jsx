@@ -143,16 +143,3 @@ export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
     </div>
   );
 };
-
-{
-  /* <Link
-to="models"
-onClick={() => handleModelScroll("models")}
-smooth={true}
-duration={1000}
-containerId="scroll-snap-container" // Use the ID of your scrollable container
-offset={-80} // Adjust as per your navbar height or any desired offset
->
-Model S
-</Link> */
-}
