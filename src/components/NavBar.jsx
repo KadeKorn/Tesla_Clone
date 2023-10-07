@@ -3,7 +3,7 @@ import { TfiClose } from "react-icons/tfi";
 import "../index.css";
 import { Link } from "react-scroll";
 
-export const NavBar = ({ currentModel, hasVideo }) => {
+export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -36,15 +36,13 @@ export const NavBar = ({ currentModel, hasVideo }) => {
             <a href="https://tesla.com/modely">Model Y</a>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
-            <Link
-              to="modelS"
-              smooth={true}
-              duration={1000}
-              containerId="scroll-snap-container" // Use the ID of your scrollable container
-              offset={-80} // Adjust as per your navbar height or any desired offset
+            <span
+              role="button"
+              className="cursor-pointer"
+              onClick={() => handleModelScroll("models")}
             >
               Model S
-            </Link>
+            </span>
           </li>
           <li className="py-1 px-3 hover:rounded hover:bg-black/5 ">
             <a href="https://tesla.com/modelx">Model X</a>
@@ -145,3 +143,16 @@ export const NavBar = ({ currentModel, hasVideo }) => {
     </div>
   );
 };
+
+{
+  /* <Link
+to="models"
+onClick={() => handleModelScroll("models")}
+smooth={true}
+duration={1000}
+containerId="scroll-snap-container" // Use the ID of your scrollable container
+offset={-80} // Adjust as per your navbar height or any desired offset
+>
+Model S
+</Link> */
+}

@@ -18,7 +18,7 @@ export const modelsData = [
     price: "From $39,390"
   },
   {
-    name: "Model S",
+    name: "Models",
     image:
       "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Model-S-Desktop-LHD-6.22.jpg",
     video: null,
