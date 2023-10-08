@@ -10,7 +10,7 @@ const NavbarItem = ({ label, onClick, href }) => {
   );
 
   return (
-    <div className="hidden lg:inline">
+    <div className="hidden lg:inline ">
       <li className="py-1 px-2 hover:rounded hover:bg-black/5 ">{content}</li>
     </div>
   );

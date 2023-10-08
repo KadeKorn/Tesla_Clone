@@ -8,7 +8,7 @@ export const modelsData = [
     video:
       "https://digitalassets.tesla.com/tesla-contents/video/upload/Model-3-Main-Hero-Video-Desktop-NA.mp4",
     textColor: "white",
-    price: "From $29,740*"
+    price: "From $29,740"
   },
   {
     name: "Model Y",
