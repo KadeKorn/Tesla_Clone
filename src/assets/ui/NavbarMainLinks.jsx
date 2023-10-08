@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavbarItem = ({ label, onClick, href }) => {
+const NavbarMainLinks = ({ label, onClick, href }) => {
   const content = onClick ? (
     <span role="button" className="cursor-pointer" onClick={onClick}>
       {label}
@@ -16,4 +16,4 @@ const NavbarItem = ({ label, onClick, href }) => {
   );
 };
 
-export default NavbarItem;
+export default NavbarMainLinks;
