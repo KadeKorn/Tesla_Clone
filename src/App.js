@@ -1,9 +1,9 @@
 import React, { useState, useRef } from "react";
 import { TeslaModels } from "./components/TeslaModels";
 import { NavBar } from "./components/NavBar";
-import { SolarProduct } from "./components/SolarProduct";
-import { solarProductsData } from "./solarProductData.js";
 import { modelsData } from "./modelsData";
+import { ExperienceTesla } from "./components/ExperienceTesla";
+import { sectionsData } from "./sectionsData"; 
 import "./index.css";
 
 function App() {
@@ -13,13 +13,13 @@ function App() {
 
   const handleScroll = (e) => {
     const index = Math.round(e.target.scrollTop / window.innerHeight);
-    setCurrentModel(modelsData[index].name);
-    setHasVideo(modelsData[index].video !== null);
+    setCurrentModel(sectionsData[index]?.name || '');  // Use sectionsData instead of modelsData
+    setHasVideo(sectionsData[index]?.video !== null || false);  // Use sectionsData instead of modelsData
   };
 
-  const handleModelScroll = (modelId) => {
-    console.log("Attempting to scroll to:", modelId);
-    const idx = modelsData.findIndex((m) => m.id === modelId);
+  const handleModelScroll = (sectionId) => {
+    console.log("Attempting to scroll to:", sectionId);
+    const idx = sectionsData.findIndex((s) => s.id === sectionId);  // Use sectionsData instead of modelsData
     if (idx !== -1 && scrollContainerRef.current) {
       const targetPosition = idx * window.innerHeight;
       scrollContainerRef.current.scrollTo(0, targetPosition);
@@ -43,11 +43,21 @@ function App() {
             <TeslaModels {...model} />
           </div>
         ))}
-         {solarProductsData.map((product, index) => (
-          <div className="scroll-snap-section" key={index} id={product.id}>
-            <SolarProduct {...product} />
-          </div>
-        ))}
+        <div className="scroll-snap-section" id="experiencetesla">
+          <ExperienceTesla />
+        </div>
+        {/* <div className="scroll-snap-section" id="solarpanels">
+          <SolarPanels />
+        </div>
+        <div className="scroll-snap-section" id="solarroof">
+          <SolarRoof />
+        </div>
+        <div className="scroll-snap-section" id="powerwall">
+          <Powerwall />
+        </div>
+        <div className="scroll-snap-section" id="accessories">
+          <Accessories />
+        </div> */}
       </div>
     </div>
   );
