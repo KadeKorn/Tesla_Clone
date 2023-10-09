@@ -1,6 +1,8 @@
 import React, { useState, useRef } from "react";
-import { Model } from "./components/Model";
+import { TeslaModels } from "./components/TeslaModels";
 import { NavBar } from "./components/NavBar";
+import { SolarProduct } from "./components/SolarProduct";
+import { solarProductsData } from "./solarProductData.js";
 import { modelsData } from "./modelsData";
 import "./index.css";
 
@@ -38,7 +40,12 @@ function App() {
       >
         {modelsData.map((model, index) => (
           <div className="scroll-snap-section" key={index} id={model.id}>
-            <Model {...model} />
+            <TeslaModels {...model} />
+          </div>
+        ))}
+         {solarProductsData.map((product, index) => (
+          <div className="scroll-snap-section" key={index} id={product.id}>
+            <SolarProduct {...product} />
           </div>
         ))}
       </div>

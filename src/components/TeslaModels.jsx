@@ -1,7 +1,7 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
 
-export const Model = ({ name, image, video, textColor, price }) => {
+export const TeslaModels = ({ name, image, video, textColor, price }) => {
   return (
     <div
       className={`relative h-screen flex items-center justify-center ${
