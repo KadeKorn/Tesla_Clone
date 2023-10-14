@@ -71,5 +71,3 @@ function App() {
 export default App;
 // REACT | TAILWIND | FIREBASE
 
-
-// Microservices and API Calls, all orgs have them Mitra
