@@ -46,11 +46,11 @@ export const NavBar = ({ currentModel, hasVideo, handleModelScroll }) => {
         />
         <NavbarMainLinks
           label="Solar Roof"
-          href="https://tesla.com/solarroof"
+          onClick={() => handleModelScroll("solarroof")}
         />
         <NavbarMainLinks
           label="Solar Panels"
-          href="https://tesla.com/solarpanels"
+          onClick={() => handleModelScroll("solarpanels")}
         />
       </ul>
 

@@ -38,11 +38,3 @@ export const modelsData = [
     price: "From $68,590"
   },
 ];
-// {
-//     name: "Experience Tesla",
-//     id: null,
-//     image:null,
-//     video: "https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4",
-//     textColor: "white",
-//     price: "Schedule a Demo Drive Today"
-//   },
