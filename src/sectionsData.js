@@ -15,13 +15,38 @@ export const sectionsData = [
   {
     name: "Solar Roof",
     id: "solarroof",
-    image: "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/425_HP_SolarPanels_D",
+    image:
+      "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/425_HP_SolarPanels_D",
     video: null,
     textColor: "Black",
     price: "Price info for Solar Roof",
   },
-
-  // ... other sections like SolarPanels, SolarRoof, etc., if needed
+  {
+    name: "Solar Panels",
+    id: "solarpanels",
+    image: "url_to_solar_panels_image",
+    video: null,
+    textColor: "black",
+    price: "Price info for Solar Panels",
+  },
+  {
+    name: "Powerwall",
+    id: "powerwall",
+    image:
+      "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Powerwall-Desktop.jpg",
+    video: null,
+    textColor: "black",
+    price: null,
+  },
+  {
+    name: "Accessories",
+    id: "accessories",
+    image:
+      "https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Accessories-Desktop-NA-APAC.jpg",
+    video: null,
+    textColor: "black",
+    price: null,
+  },
 ];
 
 // THE GRAVEYARD
