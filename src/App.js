@@ -3,6 +3,7 @@ import { TeslaModels } from "./components/TeslaModels";
 import { NavBar } from "./components/NavBar";
 import { modelsData } from "./modelsData";
 import { ExperienceTesla } from "./components/ExperienceTesla";
+import { SolarPanels } from "./components/SolarPanels";
 import { sectionsData } from "./sectionsData"; 
 import "./index.css";
 
@@ -46,10 +47,10 @@ function App() {
         <div className="scroll-snap-section" id="experiencetesla">
           <ExperienceTesla />
         </div>
-        {/* <div className="scroll-snap-section" id="solarpanels">
+         <div className="scroll-snap-section" id="solarpanels">
           <SolarPanels />
         </div>
-        <div className="scroll-snap-section" id="solarroof">
+        {/* <div className="scroll-snap-section" id="solarroof">
           <SolarRoof />
         </div>
         <div className="scroll-snap-section" id="powerwall">
@@ -57,7 +58,7 @@ function App() {
         </div>
         <div className="scroll-snap-section" id="accessories">
           <Accessories />
-        </div> */}
+        </div>  */}
       </div>
     </div>
   );

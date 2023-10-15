@@ -1,5 +1,5 @@
 // sectionsData.js
-import { modelsData } from './modelsData';
+import { modelsData } from "./modelsData";
 
 export const sectionsData = [
   ...modelsData,
@@ -7,14 +7,24 @@ export const sectionsData = [
     name: "Experience Tesla",
     id: "experiencetesla",
     image: null,
-    video: "https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4",
+    video:
+      "https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4",
     textColor: "white",
-    price: "Schedule a Demo Drive Today"
+    price: "Schedule a Demo Drive Today",
   },
+  {
+    name: "Solar Roof",
+    id: "solarroof",
+    image: "https://digitalassets.tesla.com/tesla-contents/image/upload/h_1800,w_2880,c_fit,f_auto,q_auto:best/425_HP_SolarPanels_D",
+    video: null,
+    textColor: "Black",
+    price: "Price info for Solar Roof",
+  },
+
   // ... other sections like SolarPanels, SolarRoof, etc., if needed
 ];
 
-// THE GRAVEYARD 
+// THE GRAVEYARD
 // export const solarProductsData = [
 //     {
 //       name: "Solar Roof",
@@ -33,7 +43,7 @@ export const sectionsData = [
 //       price: "Price info for Solar Panels"
 //     }
 //   ];
-  
+
 // //   {
 // //     name: "Solar Panels",
 // //     id: "solarpanels",
