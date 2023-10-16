@@ -40,7 +40,7 @@ function App() {
         className="scroll-snap-container"
         onScroll={handleScroll}
         ref={scrollContainerRef}
-        style={{zIndex: 1000}}
+      
       >
         {sectionsData.map((section, index) => (
           <div className="scroll-snap-section" key={index} id={section.id}>

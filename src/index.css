@@ -22,6 +22,7 @@ html {
   overflow-y: scroll;
   height: 100vh;
   scroll-behavior: smooth;
+  /* pointer-events: none; This allows for the sceoll.snap to work on solar roof/panels  */
 }
 
 .scroll-snap-section {
@@ -35,3 +36,6 @@ html {
   transition: transform .5s ease, opacity .5s ease;
 }
 
+.NavBar {
+  z-index: 100;
+}
