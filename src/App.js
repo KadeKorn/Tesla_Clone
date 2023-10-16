@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import { TeslaModels } from "./components/TeslaModels";
 import { NavBar } from "./components/NavBar";
-import { modelsData } from "./modelsData";
 import { ExperienceTesla } from "./components/ExperienceTesla";
 import { SolarPanels } from "./components/SolarPanels";
 import { SolarRoof } from "./components/SolarRoof";
@@ -12,18 +11,18 @@ import "./index.css";
 
 function App() {
   const [currentModel, setCurrentModel] = useState(null);
-  const [hasVideo, setHasVideo] = useState(true); // Initialize to true since the first section has a video
+  const [hasVideo, setHasVideo] = useState(true); 
   const scrollContainerRef = useRef(null);
 
   const handleScroll = (e) => {
     const index = Math.round(e.target.scrollTop / window.innerHeight);
-    setCurrentModel(sectionsData[index]?.name || '');  // Use sectionsData instead of modelsData
-    setHasVideo(sectionsData[index]?.video !== null || false);  // Use sectionsData instead of modelsData
+    setCurrentModel(sectionsData[index]?.name || '');  
+    setHasVideo(sectionsData[index]?.video !== null || false);  
   };
 
   const handleModelScroll = (sectionId) => {
     console.log("Attempting to scroll to:", sectionId);
-    const idx = sectionsData.findIndex((s) => s.id === sectionId);  // Use sectionsData instead of modelsData
+    const idx = sectionsData.findIndex((s) => s.id === sectionId);  
     if (idx !== -1 && scrollContainerRef.current) {
       const targetPosition = idx * window.innerHeight;
       scrollContainerRef.current.scrollTo(0, targetPosition);
@@ -43,32 +42,27 @@ function App() {
         ref={scrollContainerRef}
         style={{zIndex: 1000}}
       >
-        {modelsData.map((model, index) => (
-          <div className="scroll-snap-section" key={index} id={model.id}>
-            <TeslaModels {...model} />
+        {sectionsData.map((section, index) => (
+          <div className="scroll-snap-section" key={index} id={section.id}>
+            {
+              {
+                "Model 3": <TeslaModels {...section} />,
+                "Model Y": <TeslaModels {...section} />,
+                "Model S": <TeslaModels {...section} />,
+                "Model X": <TeslaModels {...section} />,
+                "Experience Tesla": <ExperienceTesla />,
+                "Solar Roof": <SolarRoof />,
+                "Solar Panels": <SolarPanels />,
+                "Powerwall": <PowerWall />,
+                "Accessories": <Accessories />
+              }[section.name]
+            }
           </div>
         ))}
-        <div className="scroll-snap-section" id="experiencetesla">
-          <ExperienceTesla />
-        </div>
-         <div className="scroll-snap-section" id="solarpanels">
-          <SolarPanels />
-        </div>
-        <div className="scroll-snap-section" id="solarroof">
-          <SolarRoof />
-        </div>
-        <div className="scroll-snap-section" id="powerwall">
-          <PowerWall />
-        </div>
-        <div className="scroll-snap-section" id="accessories">
-          <Accessories />
-        </div> 
       </div>
     </div>
   );
-  
 }
 
 export default App;
 // REACT | TAILWIND | FIREBASE
-
