@@ -36,6 +36,11 @@ html {
   transition: transform .5s ease, opacity .5s ease;
 }
 
-.NavBar {
-  z-index: 100;
+.absolute.z-20 {
+  pointer-events: none;
 }
+
+.absolute.z-20 > * {
+  pointer-events: auto;
+}
+
