@@ -1,4 +1,5 @@
 import React from "react";
+import { FiChevronDown } from "react-icons/fi";
 
 export const ExperienceTesla = () => {
   const videoUrl = "https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Homepage-Demo-Drive-Desktop-NA.mp4";
@@ -27,6 +28,9 @@ export const ExperienceTesla = () => {
               Demo Drive
             </button>
           </a>
+        </div>
+        <div className="flex justify-center animate-bounce absolute inset-x-0 bottom-[2.5%]">
+          <FiChevronDown size={20} />
         </div>
       </div>
     </div>

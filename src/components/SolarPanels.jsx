@@ -1,4 +1,6 @@
 import React from "react";
+import { FiChevronDown } from "react-icons/fi";
+
 
 export const SolarPanels = () => {
   const imgUrl =
@@ -31,6 +33,9 @@ export const SolarPanels = () => {
               </button>
             </a>
           </div>
+        </div>
+        <div className="flex justify-center animate-bounce absolute inset-x-0 bottom-[2.5%]">
+          <FiChevronDown size={20} />
         </div>
       </div>
     </div>

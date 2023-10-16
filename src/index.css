@@ -36,6 +36,8 @@ html {
   transition: transform .5s ease, opacity .5s ease;
 }
 
+/* Fix for the scroll behavior past Experience Tesla Section */
+
 .absolute.z-20 {
   pointer-events: none;
 }
@@ -43,4 +45,7 @@ html {
 .absolute.z-20 > * {
   pointer-events: auto;
 }
-
+/* Details:
+- Modified the CSS for the `.absolute.z-20` class to include `pointer-events: none;`. This change ensures that the overlay element itself does not capture or respond to mouse/touch events, effectively making it 'transparent' to user interactions.
+- Added a CSS rule for `.absolute.z-20 > *` with `pointer-events: auto;` to reset the pointer events for all direct children of the overlay. This ensures that while the overlay is transparent to mouse events, all of its child elements (such as buttons or links) remain interactive and responsive to user interactions.
+- The combined effect of these changes is to improve the user experience by allowing elements underneath the overlay (like the NavBar) to be accessible and clickable, while still preserving the interactivity of any elements on the overlay itself. */
