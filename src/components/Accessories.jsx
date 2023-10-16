@@ -19,8 +19,8 @@ export const Accessories = () => {
           <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
             <a href="https://www.tesla.com/powerwall/design">
               <button className="bg-[#eeeeee] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
-               Shop Now
-            </button>
+                Shop Now
+              </button>
             </a>
           </div>
         </div>

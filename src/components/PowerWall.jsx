@@ -19,13 +19,13 @@ export const PowerWall = () => {
           <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
             <a href="https://www.tesla.com/powerwall/design">
               <button className="bg-[#eeeeee] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
-               Order Now
+                Order Now
               </button>
-              <a href="https://www.tesla.com/powerwall">  
+            </a>
+            <a href="https://www.tesla.com/powerwall">
               <button className="bg-[#393c41] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
                 Learn More
               </button>
-            </a>
             </a>
           </div>
         </div>
