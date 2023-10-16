@@ -15,7 +15,6 @@ export const SolarRoof = () => {
           <h1 className="text-5xl font-bold">Solar Roof</h1>
           <p className="text-sm">Produce Clean Energy From Your Roof</p>
         </div>
-        ...
         <div className="flex items-center justify-center absolute inset-x-0 bottom-[10%]">
           <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
             <a href="https://www.tesla.com/energy/design">
@@ -30,7 +29,6 @@ export const SolarRoof = () => {
             </a>
           </div>
         </div>
-        ...
       </div>
     </div>
   );
