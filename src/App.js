@@ -51,8 +51,8 @@ function App() {
                 "Model S": <TeslaModels {...section} />,
                 "Model X": <TeslaModels {...section} />,
                 "Experience Tesla": <ExperienceTesla />,
-                "Solar Roof": <SolarRoof />,
                 "Solar Panels": <SolarPanels />,
+                "Solar Roof": <SolarRoof />,
                 "Powerwall": <PowerWall />,
                 "Accessories": <Accessories />
               }[section.name]

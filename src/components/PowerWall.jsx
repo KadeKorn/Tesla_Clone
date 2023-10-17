@@ -20,12 +20,12 @@ export const PowerWall = () => {
         <div className="flex items-center justify-center absolute inset-x-0 bottom-[10%]">
           <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
             <a href="https://www.tesla.com/powerwall/design">
-              <button className="bg-[#eeeeee] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
+              <button className="bg-[#eeeeee] opacity-80 rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
                 Order Now
               </button>
             </a>
             <a href="https://www.tesla.com/powerwall">
-              <button className="bg-[#393c41] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
+              <button className="bg-[#393c41] opacity-80 rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
                 Learn More
               </button>
             </a>

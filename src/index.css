@@ -12,6 +12,11 @@
   outline-offset: 2px;
 }
 
+.underline-offset {
+  text-underline-offset: 3px;
+}
+
+
 html {
   scroll-behavior: smooth;
 }

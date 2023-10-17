@@ -39,12 +39,12 @@ export const TeslaModels = ({ name, image, video, textColor, price }) => {
 
         <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">
           <a href="https://www.tesla.com/model3/design#overview">
-            <button className="bg-[#393c41] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
+            <button className="bg-[#393c41] opacity-80 rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
               Custom Order
             </button>
           </a>
           <a href="https://www.tesla.com/inventory/new/m3">
-            <button className="bg-[#eeeeee] rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
+            <button className="bg-[#eeeeee] opacity-80 rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
               Existing Inventory
             </button>
           </a>
