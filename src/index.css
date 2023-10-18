@@ -12,10 +12,9 @@
   outline-offset: 2px;
 }
 
-.underline-offset {
-  text-underline-offset: 3px;
+.underline-bold-hover:hover {
+  text-decoration-thickness: 2px; /* Adjust this value as needed */
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -38,7 +37,7 @@ html {
 /* Menu Popup */
 
 .transition-all-slow {
-  transition: transform .5s ease, opacity .5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Fix for the scroll behavior past Experience Tesla Section */

@@ -1,6 +1,6 @@
 import React from "react";
 import { FiChevronDown } from "react-icons/fi";
-
+import "../index.css";
 
 export const SolarPanels = () => {
   const imgUrl =
@@ -15,8 +15,13 @@ export const SolarPanels = () => {
       <div className="absolute top-0 left-0 w-full h-full z-20 flex flex-col">
         <div className="absolute inset-x-0 top-[15%] text-center text-black">
           <h1 className="text-5xl font-bold mb-2">Solar Panels</h1>
-          <a href="https://www.tesla.com/solar-virtual-consultations">
-             <p className="text-md underline-hover underline underline-offset">Schedule a virtual Consultation</p> {/* Should add a hover effect for the underline to make it bolder */}
+          <a
+            href="https://www.tesla.com/solar-virtual-consultations"
+            className="underline-bold-hover"
+          >
+            <p className="text-md underline underline-offset transition-all duration-300">
+              Schedule a virtual Consultation
+            </p>
           </a>
         </div>
 
