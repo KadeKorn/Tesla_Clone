@@ -3,8 +3,8 @@ import { TfiClose } from "react-icons/tfi";
 
 const MenuPopout = ({ isVisible, onClose }) => {
   const popoutClass = isVisible
-    ? "bg-white fixed top-0 right-0 w-[30%] h-full z-50 transition-all-slow transform translate-x-0 opacity-100"
-    : "bg-white fixed top-0 right-0 w-[30%] h-full z-50 transition-all-slow transform translate-x-[-100%] opacity-0 pointer-events-none";
+  ? "bg-white fixed top-0 right-0 w-[30%] h-full z-50 transition-all duration-300 transform translate-x-0 opacity-100"
+  : "bg-white fixed top-0 right-0 w-[30%] h-full z-50 transition-all duration-300 transform translate-x-full opacity-0 pointer-events-none";
 
   return (
     <div className={popoutClass}>
