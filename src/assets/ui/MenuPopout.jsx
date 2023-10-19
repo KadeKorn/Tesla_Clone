@@ -58,3 +58,14 @@ const MenuPopout = ({ isVisible, onClose }) => {
 };
 
 export default MenuPopout;
+
+/**
+ * Notes:
+ * 1. `MenuPopout` is a functional component that renders a popout menu.
+ * 2. It utilizes the `isVisible` prop to determine if the menu should be shown or hidden.
+ * 3. If `isVisible` is true, the menu appears by translating it from right to left (0% X-axis translation). 
+ *    If false, it gets translated 100% on the X-axis to hide it.
+ * 4. The `onClose` prop is a function passed down to handle the closing of the menu.
+ * 5. When the user clicks on the close icon (`TfiClose`), the `onClose` function is invoked.
+ * 6. The menu contains various list items that are links to different sections of the Tesla website.
+ */

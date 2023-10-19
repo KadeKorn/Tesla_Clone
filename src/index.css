@@ -3,67 +3,55 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "gotham Book";
-  src: url(./assets/GothamSSm-Book_Web.woff2);
+    font-family: "Gotham Book";
+    src: url(./assets/GothamSSm-Book_Web.woff2);
 }
 
 * {
-  font-family: "Gotham Book", sans-serif;
-  outline-offset: 2px;
-  box-sizing: border-box;
+    font-family: "Gotham Book", sans-serif;
+    outline-offset: 2px;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-/* Adding scroll snap properties */
+/* Scroll Snap Properties */
 .scroll-snap-container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  height: 100vh;
-  scroll-behavior: smooth;
-  /* pointer-events: none; This allows for the sceoll.snap to work on solar roof/panels  */
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+    scroll-behavior: smooth;
+    /* pointer-events: none; */
 }
 
 .scroll-snap-section {
-  scroll-snap-align: start;
-  height: 100vh;
+    scroll-snap-align: start;
+    height: 100vh;
 }
 
-/* Menu Popup */
-
+/* Menu Popup Animation */
 .transition-all-slow {
-  transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
-/* Underline effect */
-
-/* For the underline offset and initial thickness */
+/* Underline Effects */
 .text-md.underline {
-  text-underline-offset: 3px;
-  text-decoration-thickness: 1px;
-  transition: text-decoration-thickness 1.5s ease;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1px;
+    transition: text-decoration-thickness 1.5s ease;
 }
 
-/* For the bold effect on hover */
 .text-md.underline:hover {
-  text-decoration-thickness:2px;  /* Adjust this to your desired thickness on hover */
+    text-decoration-thickness: 2px;
 }
 
-
-
-
-/* Fix for the scroll behavior past Experience Tesla Section */
-
+/* Fix for Scroll Behavior Past Experience Tesla Section */
 .absolute.z-20 {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .absolute.z-20 > * {
-  pointer-events: auto;
+    pointer-events: auto;
 }
-/* Details:
-- Modified the CSS for the `.absolute.z-20` class to include `pointer-events: none;`. This change ensures that the overlay element itself does not capture or respond to mouse/touch events, effectively making it 'transparent' to user interactions.
-- Added a CSS rule for `.absolute.z-20 > *` with `pointer-events: auto;` to reset the pointer events for all direct children of the overlay. This ensures that while the overlay is transparent to mouse events, all of its child elements (such as buttons or links) remain interactive and responsive to user interactions.
-- The combined effect of these changes is to improve the user experience by allowing elements underneath the overlay (like the NavBar) to be accessible and clickable, while still preserving the interactivity of any elements on the overlay itself. */
