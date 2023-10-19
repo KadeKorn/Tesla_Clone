@@ -13,6 +13,14 @@ export const sectionsData = [
     price: "Schedule a Demo Drive Today",
   },
   {
+    name: "Solar Panels",
+    id: "solarpanels",
+    image: "url_to_solar_panels_image",
+    video: null,
+    textColor: "black",
+    price: "Price info for Solar Panels",
+  },
+  {
     name: "Solar Roof",
     id: "solarroof",
     image:
@@ -20,14 +28,6 @@ export const sectionsData = [
     video: null,
     textColor: "Black",
     price: "Price info for Solar Roof",
-  },
-  {
-    name: "Solar Panels",
-    id: "solarpanels",
-    image: "url_to_solar_panels_image",
-    video: null,
-    textColor: "black",
-    price: "Price info for Solar Panels",
   },
   {
     name: "Powerwall",

@@ -14,7 +14,7 @@ export const SolarPanels = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full z-20 flex flex-col">
         <div className="absolute inset-x-0 top-[15%] text-center text-black">
-          <h1 className="text-5xl font-bold mb-2">Solar Panels</h1>
+          <h1 className="text-5xl font-bold mb-3">Solar Panels</h1>
           <a
             href="https://www.tesla.com/solar-virtual-consultations"
             className="text-md underline"

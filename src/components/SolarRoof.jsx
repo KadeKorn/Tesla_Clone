@@ -13,7 +13,7 @@ export const SolarRoof = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full z-20 flex flex-col">
         <div className="absolute inset-x-0 top-[15%] text-center text-black">
-          <h1 className="text-5xl font-bold">Solar Roof</h1>
+          <h1 className="text-5xl font-bold mb-3">Solar Roof</h1>
           <p className="text-sm">Produce Clean Energy From Your Roof</p>
         </div>
         <div className="flex items-center justify-center absolute inset-x-0 bottom-[10%]">
