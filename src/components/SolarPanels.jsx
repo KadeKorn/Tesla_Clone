@@ -17,13 +17,11 @@ export const SolarPanels = () => {
           <h1 className="text-5xl font-bold mb-2">Solar Panels</h1>
           <a
             href="https://www.tesla.com/solar-virtual-consultations"
-            className="underline-bold-hover"
+            className="text-md underline"
           >
-            <p className="text-md underline underline-offset transition-all duration-300">
-              Schedule a virtual Consultation
-            </p>
+            Schedule a virtual Consultation
           </a>
-        </div>
+        </div> 
 
         <div className="flex items-center justify-center absolute inset-x-0 bottom-[10%]">
           <div className="flex flex-col items-center justify-center text-sm lg:flex-row absolute inset-x-0 bottom-[10%] ">

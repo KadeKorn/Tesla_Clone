@@ -10,10 +10,7 @@
 * {
   font-family: "Gotham Book", sans-serif;
   outline-offset: 2px;
-}
-
-.underline-bold-hover:hover {
-  text-decoration-thickness: 2px; /* Adjust this value as needed */
+  box-sizing: border-box;
 }
 
 html {
@@ -39,6 +36,23 @@ html {
 .transition-all-slow {
   transition: transform 0.5s ease, opacity 0.5s ease;
 }
+
+/* Underline effect */
+
+/* For the underline offset and initial thickness */
+.text-md.underline {
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-thickness 1.5s ease;
+}
+
+/* For the bold effect on hover */
+.text-md.underline:hover {
+  text-decoration-thickness:2px;  /* Adjust this to your desired thickness on hover */
+}
+
+
+
 
 /* Fix for the scroll behavior past Experience Tesla Section */
 
