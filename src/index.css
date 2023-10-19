@@ -41,7 +41,7 @@ html {
 
 /* For the underline offset and initial thickness */
 .text-md.underline {
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
   text-decoration-thickness: 1px;
   transition: text-decoration-thickness 1.5s ease;
 }
