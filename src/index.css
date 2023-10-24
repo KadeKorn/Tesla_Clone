@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* General */
+
 @font-face {
     font-family: "Gotham Book";
     src: url(./assets/GothamSSm-Book_Web.woff2);
@@ -55,3 +57,12 @@ html {
 .absolute.z-20 > * {
     pointer-events: auto;
 }
+
+/* Responsiveness */
+/* Add this to your stylesheet */
+@media (max-width: 768px) {
+    .menu-item {
+      font-size: 0.875rem; /* Adjust as needed */
+    }
+  }
+  

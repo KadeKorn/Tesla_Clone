@@ -38,3 +38,6 @@ export const modelsData = [
     price: "From $68,590"
   },
 ];
+
+// This module provides structured data for various Tesla models,
+// potentially to be used in a website showcasing Tesla's lineup.
