@@ -10,23 +10,23 @@ export const SolarRoof = () => {
       <img
         src={imgUrl}
         alt="Tesla Solar Roof"
-        className="absolute top-0 left-0 w-full h-full object-cover z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center z-10"
       />
 
       <div className="absolute top-0 left-0 w-full h-full z-20 flex flex-col">
         <div className="absolute inset-x-0 top-[15%] text-center text-black">
-          <h1 className="text-5xl font-bold mb-3">Solar Roof</h1>
-          <p className="text-sm">Produce Clean Energy From Your Roof</p>
+          <h1 className="text-2xl md:text-5xl font-bold mb-3">Solar Roof</h1>
+          <p className="text-xs md:text-sm">Produce Clean Energy From Your Roof</p>
         </div>
 
-        <div className="flex items-center justify-center absolute inset-x-0 bottom-[10%]">
-          <a href="https://www.tesla.com/energy/design">
-            <button className="bg-[#eeeeee] opacity-80 rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-black">
+        <div className="flex flex-col md:flex-row items-center justify-center absolute inset-x-0 bottom-[10%] space-y-2 md:space-y-0 md:space-x-4">
+          <a href="https://www.tesla.com/energy/design" className="w-4/5 md:w-auto">
+            <button className="bg-[#eeeeee] opacity-80 rounded-md w-full md:w-64 h-10 mt-2 text-black">
               Order Now
             </button>
           </a>
-          <a href="https://www.tesla.com/solarpanels">
-            <button className="bg-[#393c41] opacity-80 rounded-md w-96 lg:w-64 lg:mx-4 h-10 mt-2 text-white">
+          <a href="https://www.tesla.com/solarpanels" className="w-4/5 md:w-auto">
+            <button className="bg-[#393c41] opacity-80 rounded-md w-full md:w-64 h-10 mt-2 text-white">
               Learn More
             </button>
           </a>

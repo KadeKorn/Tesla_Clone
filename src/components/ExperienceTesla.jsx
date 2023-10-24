@@ -8,7 +8,7 @@ export const ExperienceTesla = () => {
   return (
     <div className="relative h-screen flex items-center justify-center">
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-10"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center z-10"
         autoPlay
         loop
         muted
@@ -19,8 +19,8 @@ export const ExperienceTesla = () => {
 
       <div className="absolute top-0 left-0 w-full h-full z-10 flex flex-col">
         <div className="absolute inset-x-0 top-[15%] text-center text-white">
-          <h1 className="text-5xl font-bold mb-3">Experience Tesla</h1>
-          <p className="text-sm">Schedule a Demo Drive Today</p>
+          <h1 className="text-2xl md:text-5xl font-bold mb-3">Experience Tesla</h1>
+          <p className="text-xs md:text-sm">Schedule a Demo Drive Today</p>
         </div>
 
         <div className="flex items-center justify-center absolute inset-x-0 bottom-[10%]">
@@ -28,12 +28,14 @@ export const ExperienceTesla = () => {
             href="https://www.tesla.com/test-drive"
             target="_blank"
             rel="noopener noreferrer"
+            className="w-4/5 md:w-auto"
           >
-            <button className="border-4 border-white bg-transparent text-white py-2 px-24 rounded">
+            <button className="border-4 border-white bg-transparent text-white py-2 px-12 md:px-24 rounded w-full">
               Demo Drive
             </button>
           </a>
         </div>
+
         <div className="flex justify-center animate-bounce absolute inset-x-0 bottom-[2.5%]">
           <FiChevronDown size={20} />
         </div>
@@ -41,6 +43,7 @@ export const ExperienceTesla = () => {
     </div>
   );
 };
+
 
 // Notes:
 // - This component showcases a video from Tesla with the option for users to schedule a demo drive.
