@@ -5,65 +5,66 @@
 /* General */
 
 @font-face {
-    font-family: "Gotham Book";
-    src: url(./assets/GothamSSm-Book_Web.woff2);
+  font-family: "Gotham Book";
+  src: url(./assets/GothamSSm-Book_Web.woff2);
 }
 
 * {
-    font-family: "Gotham Book", sans-serif;
-    outline-offset: 2px;
-    box-sizing: border-box;
+  font-family: "Gotham Book", sans-serif;
+  outline-offset: 2px;
+  box-sizing: border-box;
 }
 
-html, body, #root {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* This will hide any unintended horizontal overflow */
-  }
-  
+html,
+body,
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* This will hide any unintended horizontal overflow */
+}
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Scroll Snap Properties */
 .scroll-snap-container {
-    scroll-snap-type: y mandatory;
-    overflow-y: scroll;
-    height: 100vh;
-    scroll-behavior: smooth;
-    /* pointer-events: none; */
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+  /* pointer-events: none; */
 }
 
 .scroll-snap-section {
-    scroll-snap-align: start;
-    height: 100vh;
+  scroll-snap-align: start;
+  height: 100vh;
 }
 
 /* Menu Popup Animation */
 .transition-all-slow {
-    transition: transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 /* Underline Effects */
 .text-md.underline {
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-    transition: text-decoration-thickness 1.5s ease;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: text-decoration-thickness 1.5s ease;
 }
 
 .text-md.underline:hover {
-    text-decoration-thickness: 2px;
+  text-decoration-thickness: 2px;
 }
 
 /* Fix for Scroll Behavior Past Experience Tesla Section */
 .absolute.z-20 {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 .absolute.z-20 > * {
-    pointer-events: auto;
+  pointer-events: auto;
 }
 
 /* Responsiveness */
